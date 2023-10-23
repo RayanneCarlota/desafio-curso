@@ -35,7 +35,7 @@ import me.dio.copa.catar.ui.theme.Shapes
 typealias NotificationOnClick = (match: MatchDomain) -> Unit
 
 @Composable
-fun MainScreen(matches: List<MatchDomain>, onNotificationClick: NotificationOnClick) {
+fun CopaScreen(matches: List<MatchDomain>, onNotificationClick: NotificationOnClick) {
     Box(
         modifier = Modifier
             .fillMaxSize()

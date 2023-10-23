@@ -14,7 +14,7 @@ import me.dio.copa.catar.ui.theme.Copa2022Theme
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by viewModels<CopaViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Copa2022Theme {
                 val state by viewModel.state.collectAsState()
-                MainScreen(matches = state.matches, viewModel::toggleNotification)
+                CopaScreen(matches = state.matches, viewModel::toggleNotification)
             }
         }
     }

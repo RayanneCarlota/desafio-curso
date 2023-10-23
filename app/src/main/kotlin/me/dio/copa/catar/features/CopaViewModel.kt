@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.dio.copa.catar.core.BaseViewModel
+import me.dio.copa.catar.core.CopaViewModel
 import me.dio.copa.catar.domain.model.Match
 import me.dio.copa.catar.domain.model.MatchDomain
 import me.dio.copa.catar.domain.usecase.DisableNotificationUseCase
@@ -18,11 +18,11 @@ import me.dio.copa.catar.remote.UnexpectedException
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
+class CopaViewModel @Inject constructor(
     private val getMatchesUseCase: GetMatchesUseCase,
     private val disableNotificationUseCase: DisableNotificationUseCase,
     private val enableNotificationUseCase: EnableNotificationUseCase,
-) : BaseViewModel<MainUiState, MainUiAction>(MainUiState()) {
+) : CopaViewModel<MainUiState, MainUiAction>(MainUiState()) {
 
     init {
         fetchMatches()

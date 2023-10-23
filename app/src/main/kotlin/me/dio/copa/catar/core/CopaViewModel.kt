@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel<UiState, UiAction>(initialState: UiState) : ViewModel() {
+abstract class CopaViewModel<UiState, UiAction>(initialState: UiState) : ViewModel() {
 
     private val _state = MutableStateFlow(initialState)
     val state: StateFlow<UiState> = _state
